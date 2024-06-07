@@ -1,12 +1,12 @@
-provider "azurerm" {
-  features {
+# provider "azurerm" {
+#   features {
     
-  }
+#   }
+# }
+terraform {
+  required_version = ">= 0.12.26"
 }
 
-# Resource block for creating of resource group
-resource "azurerm_resource_group" "rg" {
-  name = var.name
-  location = var.location
-  tags = var.tags
+output "hello_world" {
+  value = "Hello, World!"
 }
